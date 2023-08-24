@@ -97,6 +97,28 @@
       </div>
     </div>
   </div>
+  <script>
+    // Wait for the DOM to be ready
+    document.addEventListener("DOMContentLoaded", function() {
+      // Get the form element
+      var form = document.getElementById("certificateForm");
+
+      // Add a submit event listener to the form
+      form.addEventListener("submit", function(event) {
+        // Get the input elements you want to trim
+        var nameInput = document.getElementById("name");
+        var emailInput = document.getElementById("email");
+
+        // Trim spaces from the input values
+        nameInput.value = nameInput.value.trim();
+        emailInput.value = emailInput.value.trim();
+
+        // You can add similar trimming for other inputs if needed
+
+        // Form submission will proceed normally after trimming
+      });
+    });
+  </script>
   <script src="https://unpkg.com/pdf-lib@1.4.0"></script>
     <script src="./FileSaver.js"></script>
     <script src="https://unpkg.com/@pdf-lib/fontkit@0.0.4"></script>
